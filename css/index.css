@@ -1,0 +1,49 @@
+/* Specific Page Stylesheet for index.html */
+
+
+#indexBackground {
+    padding: 48px 0 0 0;
+    /* background-image: url('../img/background.png'); */
+    background-size: contain;
+    background-position: top left;
+}
+
+.featuredItem {
+    padding: 48px;
+    text-align: center;
+}
+
+.featuredItem img {
+    width: 360px;
+}
+
+.featuredItem .infobox {
+    margin: 32px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.featuredItem h3 {
+    font-size: 1.5em;
+}
+
+.featuredDescription {
+    padding: 48px;
+}
+
+.featuredDescription h2 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.featuredDescription h1 {
+    text-align: left;
+}
+
+.featuredDescription .cta {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--accent-color);
+}

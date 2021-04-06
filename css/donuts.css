@@ -1,0 +1,69 @@
+/* Specific Page Stylesheet for donuts.html */
+
+
+#indexBackground {
+    padding: 48px 0 0 0;
+    /* background-image: url('../img/background.png'); */
+    background-size: contain;
+    background-position: top left;
+}
+
+.menuItem {
+    padding: 16px;
+    text-align: center;
+}
+
+.menuItem img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.menuItem .infobox {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.menuItem h3 {
+    font-size: 1em;
+}
+
+.menuItem{
+    color: black !important;
+}
+
+.menuItem .spinner {
+    width: 30px
+}
+
+#description {
+    margin: 36px;
+    text-align: center;
+}
+
+.doughPicker {
+    margin: 36px;
+    text-align: center;
+}
+
+.doughPicker h3, .doughPicker h4 {
+    margin: 0;   
+}
+
+.addToCart {
+    text-align: center
+}
+
+.addToCart h3, .addToCart h2{
+    margin: 8px
+}
+
+.addToCart button {
+    padding: 8px;
+    color: white;
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--accent-color);
+}

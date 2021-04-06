@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Donut Theory - Order Donuts</title>
+
+	<!-- General Website Stylesheet -->
+	<link rel="stylesheet" href="css/default.css" type="text/css" />
+
+	<!-- Specific Page Stytlesheet -->
+	<link rel="stylesheet" href="css/donuts.css" type="text/css" />
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+
+<body>
+	<!-- Start of Page Content -->
+	<div class="wrapper">
+		<!-- Start of Header -->
+		<header>
+			<a href="index.html">
+				<span id="menuTitle">
+					<img src="img/logo.jpg" alt="Donut Theory Logo" />
+				</span>
+			</a>
+
+			<ul id="navList">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="locationmenu.html">Location & Menus</a></li>
+				<li class="navCurrent"><a href="onlinemenu.html">Order Online</a></li>
+				<li><a href="cart.html">Cart<sup>&nbsp;<span id="cartCount">0</span></sup></a></li>
+			</ul>
+		</header>
+		<!-- End of Header -->
+
+		<!-- Start of Main Content -->
+		<article id="indexBackground">
+
+			<h1> Customize your box of Donuts</h1>
+
+			<br>
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="column-6">
+					<div id="almond" class="menuItem">
+						<img src="img/donut_almond.png" alt="Toast Almond Donut" />
+						<div class="infobox">
+							<h3>Toasted Almond Toffee</h3>
+							<p>
+								<button type="button" class="down-button">&ndash;</button>
+								<input class="spinner" type="number" min="0" max="12" value="0">
+								<button type="button" class="up-button">+</button>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="column-6">
+					<div id="classic" class="menuItem">
+						<img src="img/donut_almond.png" alt="Toast Almond Donut" />
+						<div class="infobox">
+							<h3>Classic Sugar Glaze</h3>
+							<p>
+								<button type="button" class="down-button">&ndash;</button>
+								<input class="spinner" type="number" min="0" max="12" value="0">
+								<button type="button" class="up-button">+</button>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column-6">
+					<div id="chocolate" class="menuItem">
+						<img src="img/donut_almond.png" alt="Toast Almond Donut" />
+						<div class="infobox">
+							<h3>Classic Chocolate Glaze</h3>
+							<p>
+								<button type="button" class="down-button">&ndash;</button>
+								<input class="spinner" type="number" min="0" max="12" value="0">
+								<button type="button" class="up-button">+</button>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column-6">
+					<div id="pink" class="menuItem">
+						<img src="img/donut_almond.png" alt="Toast Almond Donut" />
+						<div class="infobox">
+							<h3>Crazy Pink n Sprinkles</h3>
+							<p>
+								<button type="button" class="down-button">&ndash;</button>
+								<input class="spinner" type="number" min="0" max="12" value="0">
+								<button type="button" class="up-button">+</button>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column-6">
+					<div id="strawberry" class="menuItem">
+						<img src="img/donut_almond.png" alt="Toast Almond Donut" />
+						<div class="infobox">
+							<h3>Strawberry Jelly Surprise</h3>
+							<p>
+								<button type="button" class="down-button">&ndash;</button>
+								<input class="spinner" type="number" min="0" max="12" value="0">
+								<button type="button" class="up-button">+</button>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="column-6">
+					<div id="mango" class="menuItem">
+						<img src="img/donut_almond.png" alt="Toast Almond Donut" />
+						<div class="infobox">
+							<h3>Mango Lime Mystery</h3>
+							<p>
+								<button type="button" class="down-button">&ndash;</button>
+								<input class="spinner" type="number" min="0" max="12" value="0">
+								<button type="button" class="up-button">+</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column-3"></div>
+				<div id="description" class="column-3">
+					Head Baker Tom’s special creation was made when he toasted almonds for a little too long,
+					but gives this donut a wonderful smokiness when paired with our signature toffee glaze.
+				</div>
+				<div class="column-3"></div>
+			</div>
+
+
+
+			<div class="doughPicker">
+				<label for="dough">
+					<h3>Type of Dough</h3>
+				</label>
+
+				<select name="dough" id="dough">
+					<option value="classic">Classic Dough</option>
+					<option value="sourdough">Local Sourdough (+$0.50/donut)</option>
+					<option value="glutenfree">Gluten-Free (+$0.50/donut)</option>
+				</select>
+
+				<br>
+				<br>
+			</div>
+
+			<div class="addToCart">
+				<button type="button" class="addToCartButton">
+					<h3>
+						<span id="donutUnits">Pick some Donuts to<br></span>
+						(<span id="donutCount">0</span> Donuts)
+					</h3>
+					<h2>
+						Add <span id="donutCost"></span> to Cart
+					</h2>
+				</button>
+			</div>
+
+
+			<br>
+			<br>
+			<br>
+			<br>
+		</article>
+		<!-- End of Main Content -->
+
+		<!-- Start of Footer -->
+		<footer>
+			<p>
+				© Donut Theory - Study of Pastries
+				<br>
+				Webmaster: Ron Chew (rchew)
+			</p>
+		</footer>
+		<!-- End of Footer -->
+
+	</div>
+
+	<script src="js/productitems.js"></script>
+
+</body>
+
+</html>

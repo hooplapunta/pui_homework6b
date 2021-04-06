@@ -1,0 +1,46 @@
+/* Specific Page Stylesheet for onlinemenu.html */
+
+
+#indexBackground {
+    padding: 48px 0 0 0;
+    /* background-image: url('../img/background.png'); */
+    background-size: contain;
+    background-position: top left;
+}
+
+.locationPicker {
+    margin: 36px 0;
+    text-align: center;
+}
+
+.locationPicker h3, .locationPicker h4 {
+    margin: 0;   
+}
+
+
+.menuItem {
+    padding: 48px;
+    text-align: center;
+}
+
+.menuItem img {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.menuItem .infobox {
+    margin: 32px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.menuItem h3 {
+    font-size: 1.5em;
+}
+
+.menuItem{
+    color: black !important;
+}
