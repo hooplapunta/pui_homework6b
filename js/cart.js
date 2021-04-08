@@ -59,11 +59,11 @@ $(document).ready(function () {
             var item = itemsInCart[i];
             var tr = $("<tr></tr>");
 
-            var img = $("<td></td>").append($("<img/>").attr("src", "../img/donut_almond.png").attr("width", 100));
+            var img = $("<td></td>").append($("<img/>").attr("src", "img/donut_almond.png").attr("width", 100));
             var name = $("<td></td>").html("<b>" + item.name + "</b><br/>" + item.description.join("<br/>"));
             var cost = $("<td></td>").html("$" + item.cost);
-            var remove = $("<button>Remove</button>").attr("onclick", "removeFromCart(" +i +")");
-            
+            var remove = $("<button>Remove</button>").attr("onclick", "removeFromCart(" + i + ")");
+
             tr.append(img, name, cost, remove);
             tr.append("<br/><br/>")
 
@@ -78,18 +78,18 @@ $(document).ready(function () {
 
         $(".payNow").hide();
     }
-    
+
 
     // calculate total
-    var subtotal = _.reduce(itemsInCart, function(sum, n) {
+    var subtotal = _.reduce(itemsInCart, function (sum, n) {
         return sum + n.cost;
-      }, 0);
+    }, 0);
     subtotal = subtotal.toFixed(2);
     var tax = 0.07 * subtotal;
     tax = tax.toFixed(2);
     var total = parseFloat(subtotal) + parseFloat(tax);
     total = total.toFixed(2);
-    
+
     $("#cartSubtotal").text(subtotal);
     $("#cartTax").text(tax);
     $("#cartTotal").text(total);

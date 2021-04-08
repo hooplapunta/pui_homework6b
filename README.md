@@ -18,3 +18,6 @@ Can be found in reflection_6b.pdf
 I would like to be reviewed for these issues which have been fixed:
 - -1 comment JavaScript Code
 - -2 ReadMe states that we can click on the cart icon to go to the cart page but the page does not render
+
+## Extra Credit
+- I added a Facebook sharing button that would give a preview of the website using the Facebook open graph meta tags. You can try this on the donut page. It was included by using ShareThis.

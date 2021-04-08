@@ -18,13 +18,13 @@ var donutOptions = [
 but this donut has a wonderful smokiness, especially when paired with our signature toffee glaze."),
     new Option("classic", "Despite this donut having just the simple classic sugary glaze, our humble beginnings \
     uses the finest vanilla and sugar that is also sustainably sourced!"),
-    new Option("chocolate","Nothing is quite like this decadant treat of a luscious glaze atop any donut, \
+    new Option("chocolate", "Nothing is quite like this decadant treat of a luscious glaze atop any donut, \
     made with a mix of both 70% dark and milk chocolate, plus a hint of spice."),
     new Option("pink", '"Hey, hey you", Pink Donut says. "Are you feeling craaaaazy?!" \
     Our crazy pink donut does not actually talk, but we believe that is what it would say. '),
     new Option("strawberry", "An innocent looking sugar-dusted donut this looks, but once you bite into \
     the center, expect an explosion of delicious homemade strawberry jelly."),
-    new Option("mango",  "Is it mango? Is it lime? What we do know that this donut is a mystery. \
+    new Option("mango", "Is it mango? Is it lime? What we do know that this donut is a mystery. \
     We are pretty sure it tastes different every bite, but it will always be moreish.")
 ]
 
@@ -43,7 +43,7 @@ $(".menuItem").on("mouseover", function (event) {
     var id = $(this).attr("id")
     var text = "All our donuts are baked fresh daily. Select any donut to learn more about all of Donut Theory's doughy personality."
 
-    text = _.find(donutOptions, {'name': id}).description;
+    text = _.find(donutOptions, { 'name': id }).description;
 
     $("#description").html(text)
 });
@@ -85,7 +85,7 @@ function updateAmount(event) {
         }
         return a + parseInt(b.value);
     }, 0)
-    
+
     $("#donutCount").html(totalDonuts)
     console.log("totalDonuts", totalDonuts)
     console.log("ids", ids)
