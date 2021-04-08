@@ -60,11 +60,12 @@ $(document).ready(function () {
             var tr = $("<tr></tr>");
 
             var img = $("<td></td>").append($("<img/>").attr("src", "../img/donut_almond.png").attr("width", 100));
-            var name = $("<td></td>").html(item.name);
-            var cost = $("<td></td>").html(item.cost);
+            var name = $("<td></td>").html("<b>" + item.name + "</b><br/>" + item.description.join("<br/>"));
+            var cost = $("<td></td>").html("$" + item.cost);
             var remove = $("<button>Remove</button>").attr("onclick", "removeFromCart(" +i +")");
             
             tr.append(img, name, cost, remove);
+            tr.append("<br/><br/>")
 
             table.append(tr);
         }

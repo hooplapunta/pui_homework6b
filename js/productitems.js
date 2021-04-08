@@ -75,10 +75,20 @@ $(".down-button").on("click", function (event) {
 var toAddToCart = [];
 
 function updateAmount(event) {
-    var totalDonuts = $(".menuItem").find("input").toArray().reduce((a, b) => a + parseInt(b.value), 0)
+    var ids = [];
+
+    var totalDonuts = $(".menuItem").find("input").toArray().reduce((a, b) => {
+        if (b.value > 0) {
+            for (let i = 0; i < b.value; i++) {
+                ids.push(b.name);
+            }
+        }
+        return a + parseInt(b.value);
+    }, 0)
     
     $("#donutCount").html(totalDonuts)
     console.log("totalDonuts", totalDonuts)
+    console.log("ids", ids)
 
     var totalSizes = [];
     var totalCost = 0;
@@ -87,9 +97,12 @@ function updateAmount(event) {
     while (totalDonuts > 0) {
         for (item of donutItems) {
             if (item.size <= totalDonuts) {
-                console.log("remove donuts", item.size);
                 totalDonuts -= item.size;
-                totalSizes.push(item);
+                var addItem = {
+                    ...item,
+                    description: ids.slice(0, item.size)
+                }
+                totalSizes.push(addItem);
                 totalCost += item.cost;
                 break;
             }
