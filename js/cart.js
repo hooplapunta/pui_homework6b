@@ -53,20 +53,31 @@ $(document).ready(function () {
     // if there is a cartdisplay element, render it
     var table = $("#cartItems");
 
-    // render a new table row for each item
-    for (var i = 0; i < itemsInCart.length; i++) {
-        var item = itemsInCart[i];
+    if (itemsInCart.length > 0) {
+        // render a new table row for each item
+        for (var i = 0; i < itemsInCart.length; i++) {
+            var item = itemsInCart[i];
+            var tr = $("<tr></tr>");
+
+            var img = $("<td></td>").append($("<img/>").attr("src", "../img/donut_almond.png").attr("width", 100));
+            var name = $("<td></td>").html(item.name);
+            var cost = $("<td></td>").html(item.cost);
+            var remove = $("<button>Remove</button>").attr("onclick", "removeFromCart(" +i +")");
+            
+            tr.append(img, name, cost, remove);
+
+            table.append(tr);
+        }
+    } else {
+        // tell the user the cart is empty
         var tr = $("<tr></tr>");
-
-        var img = $("<td></td>").append($("<img/>").attr("src", "../img/donut_almond.png").attr("width", 100));
-        var name = $("<td></td>").html(item.name);
-        var cost = $("<td></td>").html(item.cost);
-        var remove = $("<button>Remove</button>").attr("onclick", "removeFromCart(" +i +")");
-        
-        tr.append(img, name, cost, remove);
-
+        var name = $("<td></td>").html("Your cart is empty! Click Order Online to add things.");
+        tr.append(name);
         table.append(tr);
+
+        $(".payNow").hide();
     }
+    
 
     // calculate total
     var subtotal = _.reduce(itemsInCart, function(sum, n) {
