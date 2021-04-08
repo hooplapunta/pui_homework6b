@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Donut Theory - Cart</title>
+
+	<!-- General Website Stylesheet -->
+	<link rel="stylesheet" href="css/default.css" type="text/css" />
+
+	<!-- Specific Page Stytlesheet -->
+	<link rel="stylesheet" href="css/cart.css" type="text/css" />
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+
+<body>
+	<!-- Start of Page Content -->
+	<div class="wrapper">
+		<!-- Start of Header -->
+		<header>
+			<a href="index.html">
+				<span id="menuTitle">
+					<img src="img/logo.jpg" alt="Donut Theory Logo" />
+				</span>
+			</a>
+
+			<ul id="navList">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="locationmenu.html">Location & Menus</a></li>
+				<li class="navCurrent"><a href="onlinemenu.html">Order Online</a></li>
+				<li><a href="cart.html">Cart<sup>&nbsp;<span id="cartCount">0</span></sup></a></li>
+			</ul>
+		</header>
+		<!-- End of Header -->
+
+		<!-- Start of Main Content -->
+		<article id="indexBackground">
+
+			<h1>Confirm your Order</h1>
+
+			<br>
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="column-2">
+
+				</div>
+
+				<div class="column-2">
+					<div class="payNow">
+						<p>
+							Sales Tax $<span id="cartTax">0.00</span>
+						</p>
+
+						<button type="button" class="payNowButton">
+							<h3>
+								Pay Now
+							</h3>
+							<h2>
+								$<span id="cartCost">0.00</span>
+							</h2>
+						</button>
+
+						<br/>
+						<br/>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	</article>
+	<!-- End of Main Content -->
+
+	<!-- Start of Footer -->
+	<footer>
+		<p>
+			© Donut Theory - Study of Pastries
+			<br>
+			Webmaster: Ron Chew (rchew)
+		</p>
+	</footer>
+	<!-- End of Footer -->
+
+	</div>
+
+	<script src="js/cart.js"></script>
+	<script src="js/productitems.js"></script>
+
+</body>
+
+</html>

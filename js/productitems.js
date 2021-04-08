@@ -72,31 +72,12 @@ $(".down-button").on("click", function (event) {
 });
 
 // update amount in add to cart button
-var toAddToCart = 0;
+var toAddToCart = [];
 
 function updateAmount(event) {
     var totalDonuts = $(".menuItem").find("input").toArray().reduce((a, b) => a + parseInt(b.value), 0)
     $("#donutCount").html(totalDonuts)
     console.log("totalDonuts", totalDonuts)
-
-    // var sizes = [
-    //     {
-    //         size: 12,
-    //         unit: "Box of 1 Dozen",
-    //         cost: 19.99
-    //     },
-    //     {
-    //         size: 6,
-    //         unit: "Box of 1/2 Dozen",
-    //         cost: 10.99
-    //     },
-    //     {
-    //         size: 1,
-    //         unit: "donuts in bag",
-    //         cost: 1.99
-    //     }
-    // ]
-
 
     var totalSizes = [];
     var totalCost = 0;
@@ -113,7 +94,7 @@ function updateAmount(event) {
         }
     }
     $("#donutCost").html("$" + totalCost.toFixed(2))
-    toAddToCart = totalSizes.length;
+    toAddToCart = totalSizes;
 
     var finalUnits = "";
     var totalUnits = _.countBy(totalSizes, "name");
@@ -124,6 +105,14 @@ function updateAmount(event) {
 }
 
 $(".addToCartButton").on("click", function (event) {
-    $("#cartCount").html(parseInt($("#cartCount").html()) + toAddToCart);
+    if (toAddToCart.length == 0) {
+        return;
+    }
+
+    for (item of toAddToCart) {
+        addToCart(item);
+    }
+
+    alert("Added " + toAddToCart.length + " items to cart");
 });
 

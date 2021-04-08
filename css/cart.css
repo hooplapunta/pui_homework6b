@@ -1,0 +1,25 @@
+/* Specific Page Stylesheet for donuts.html */
+
+
+#indexBackground {
+    padding: 48px 0 0 0;
+    /* background-image: url('../img/background.png'); */
+    background-size: contain;
+    background-position: top left;
+}
+
+.payNow {
+    text-align: center
+}
+
+.payNow h3, .payNow h2{
+    margin: 8px
+}
+
+.payNow button {
+    padding: 8px;
+    color: white;
+    border-radius: 8px;
+    border-style: none;
+    background-color: var(--accent-color);
+}
