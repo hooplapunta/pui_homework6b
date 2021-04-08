@@ -44,12 +44,29 @@ $(document).ready(function () {
     loadCart();
 
     // if there is a cartdisplay element, render it
+    var table = $("#cartItems");
+
+    // render a new table row for each item
+    for (item of itemsInCart) {
+        var tr = $("<tr></tr>");
+
+        var img = $("<td></td>").append($("<img/>").attr("src", "../img/donut_almond.png").attr("width", 100));
+        var name = $("<td></td>").html(item.name);
+        var cost = $("<td></td>").html(item.cost);
+        var remove = $("<button>Remove</button>");
+        
+        tr.append(img, name, cost, remove);
+
+        table.append(tr);
+    }
 
     // new tr
     // td img
     // td name, description
     // td quantity
     // td cost
+
+    // calcu
 
     // calculate total
 

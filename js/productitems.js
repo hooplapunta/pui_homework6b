@@ -82,6 +82,7 @@ function updateAmount(event) {
     var totalSizes = [];
     var totalCost = 0;
 
+    // split the selection into different sized boxes/bags
     while (totalDonuts > 0) {
         for (item of donutItems) {
             if (item.size <= totalDonuts) {
