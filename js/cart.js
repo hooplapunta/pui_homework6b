@@ -2,7 +2,11 @@ var itemsInCart = [];
 
 // function for loading from storage
 function loadCart() {
-    itemsInCart = JSON.parse(localStorage.getItem("itemsInCart"));
+    saved = JSON.parse(localStorage.getItem("itemsInCart"));
+    if (saved) {
+        itemsInCart = saved;
+    }
+
     updateCounter();
 }
 
