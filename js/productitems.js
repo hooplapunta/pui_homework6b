@@ -76,6 +76,7 @@ var toAddToCart = [];
 
 function updateAmount(event) {
     var totalDonuts = $(".menuItem").find("input").toArray().reduce((a, b) => a + parseInt(b.value), 0)
+    
     $("#donutCount").html(totalDonuts)
     console.log("totalDonuts", totalDonuts)
 
